@@ -6,8 +6,12 @@ function renderOneRecipe(recipe){
     card.innerHTML =`
     <img src="${recipe.imageUrl}">
     <div class="content">
-        <h4>${recipe.recipeName}
+        <h4>${recipe.name}</h4>
+        <p>
+            $<span class="cook-time">${recipe.time}</span> CookTime
+        <h4>${recipe.description}</h4>
     `
+    console.log(card)
 }
 
 
