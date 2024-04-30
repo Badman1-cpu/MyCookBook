@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(function (response) {
                     if (response.ok) {
                         console.log('Recipe added successfully!');
-                        // Optionally, you can redirect the user or show a success message here
+                        // Redirect the user or show a success message here
                     } else {
                         console.error('Error adding recipe:', response.statusText);
                         // Handle the error appropriately
