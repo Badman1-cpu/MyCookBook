@@ -3,6 +3,9 @@ function renderOneRecipe(recipe){
     //Bulid Reccipe Card
     let card = document.createElement('li')
     card.className = 'card'
+    card.innerHTML ='
+    <
+    '
 }
 
 
