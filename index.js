@@ -23,14 +23,12 @@ fetch('http://localhost:3000/recipes')
     }
     return response.json();
   })
-  .then(data => {
+  .then(recipes => {
     // Define recipeData after fetching JSON data
     const recipeData = recipes.data;
+    Initialize => {
+      recipeData.forEach(recipe => renderOneRecipe(recipe))
+  }
     // Call Initialize function with fetched data
-    Initialize(recipeData);
+    Initialize();
   })
-//Initial Render
-function Initialize(recipeData){
-    recipeData.forEach(recipe => renderOneRecipe(recipe))
-}
-Initialize()
