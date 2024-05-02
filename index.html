@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <script defer src="db.json"></script>
     <title>My CookBook</title>
     <style>
         body {
@@ -14,10 +12,9 @@
             background-color: lightgreen;
         }
         .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            margin: 20px auto;
+            width: 80%; /* Adjust the width as needed */
+            max-width: 600px; /* Adjust the max-width as needed */
             background-color: white;
             padding: 20px;
             border-radius: 10px;
@@ -44,6 +41,33 @@
         input[type="submit"]:hover {
             background-color: skyblue;
         }
+        /* Style for recipe cards */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Adjust as needed */
+            padding: 0;
+            margin-top: 20px;
+            list-style-type: none;
+        }
+        .card {
+            width: calc(33.33% - 20px); /* Adjust the width as needed */
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .card .content {
+            padding: 10px;
+        }
+        .card .button {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -56,11 +80,13 @@
             <input type="text" id="imageURL" name="imageUrl" placeholder="Picture">
             <input type="submit" value="Add To CookBook" id="submitButton">
         </form>
-        <ul id="recipe-list" class="cards">
-            //displays server
-        </ul>
     </div>
-
+    <div class="container">
+        <h2>Recipe Cards</h2>
+        <ul id="recipe-list" class="cards"></ul>
+    </div>
     
+    <script src="index.js"></script>
+    <script defer src="db.json"></script>
 </body>
 </html>
