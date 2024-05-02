@@ -51,7 +51,9 @@ function getAllRecipes(){
 initialize()
 
 //Add Recipe to Recipe-list
-function addRecipe()
+function addRecipe(){
+  
+}
   //const recipeContainer = document.getElementById('recipe-list');
 
   //function renderRecipeCard(recipes) {
