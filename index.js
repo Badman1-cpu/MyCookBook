@@ -1,3 +1,17 @@
+//Grabs button and deletes parnet node
+function addEventListenerToDeleteButtons(){
+  let buttons = document.getElementsByClassName
+  ('delete_btn')
+  for(let btn of buttons){
+    btn.addEventListener('click',handleDelete)
+  }
+}
+addEventListenerToDeleteButtons()
+//Will delete recipe
+function handleDelete(e){
+  e.target.parentNode.remove()
+}
+
 //DOM Render Functions
 function renderOneRecipe(recipes){
     //Bulid Reccipe Card
@@ -14,7 +28,7 @@ function renderOneRecipe(recipes){
     </div>
     <div class="button">
       <button> Like </button>
-      <button> Delete </button>
+      <button class="delete_btn"> Delete </button>
     `
     document.querySelector(`#recipe-list`).appendChild(card)
 }
@@ -36,6 +50,8 @@ function getAllRecipes(){
   }
 initialize()
 
+//Add Recipe to Recipe-list
+function addRecipe()
   //const recipeContainer = document.getElementById('recipe-list');
 
   //function renderRecipeCard(recipes) {
