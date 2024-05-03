@@ -22,13 +22,6 @@
       "timesCooked": ""
     },
     {
-      "id": "9317",
-      "name": "Pie",
-      "description": "Hot Fruit",
-      "time": "120 Minutes",
-      "timesCooked": ""
-    },
-    {
       "id": "0063",
       "name": "Fried Rice",
       "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
@@ -45,6 +38,12 @@
       "name": "Fried Rice",
       "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
       "time": "25 Minutes"
+    },
+    {
+      "id": "7cb4",
+      "name": "Bacon egg and cheese",
+      "description": "I'm from nyc",
+      "time": "15 Minutes"
     }
   ]
 }

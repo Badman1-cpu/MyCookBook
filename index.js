@@ -17,7 +17,8 @@ function renderOneRecipe(recipes){
     document.querySelector(`#recipe-list`).appendChild(card);
 
     card.querySelector('#delete_btn').addEventListener('click', () => {        
-      card.innerHTML = ''
+      card.remove()
+      deleteRecipe(recipes.id)
     })
 }
 
@@ -66,9 +67,9 @@ function addRecipe(recipe){
   .then(res => res.json())
   .then(recipe => renderOneRecipe(recipe))
 }
-
+//Handles Delete
 function deleteRecipe(id){
-  fetch('http://localhost:3000/recipes/${id}',{
+  fetch(`http://localhost:3000/recipes/${id}`,{
     method:'DELETE',
     headers:{'Content-Type':'application/json'
 }
