@@ -75,5 +75,5 @@ function deleteRecipe(id){
 }
   })
   .then(res => res.json())
-  .then(recipes =console.log(recipes))
+  .then(recipes => console.log(recipes))
 }
