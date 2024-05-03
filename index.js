@@ -9,9 +9,6 @@ function renderOneRecipe(recipes){
         <p>
             <span class="cook-time">${recipes.time}</span> CookTime
         </p>
-        <p>
-        <span id="cooked">${recipes.timesCooked}</span>
-        </p>
         <p>${recipes.description}</p>
     </div>
     <div class="button">
@@ -42,7 +39,7 @@ function getAllRecipes(){
 initialize()
 
 //Add Recipe to Recipe-list
-
+//
 //Event Listeners
 document.querySelector('#recipeForm').addEventListener('submit',handleSubmit);
 
@@ -72,4 +69,3 @@ function addRecipe(recipe){
   .then(recipe => renderOneRecipe(recipe))
 }
 
-//Delete Button
