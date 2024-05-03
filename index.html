@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CookBook</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightgreen;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%; /* Adjust the width as needed */
+            max-width: 600px; /* Adjust the max-width as needed */
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: lightblue;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: skyblue;
+        }
+        /* Style for recipe cards */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Adjust as needed */
+            padding: 0;
+            margin-top: 20px;
+            list-style-type: none;
+        }
+        .card {
+            width: calc(33.33% - 20px); /* Adjust the width as needed */
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .card .content {
+            padding: 10px;
+        }
+        .card .button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My CookBook</h1>
+        <form id="recipeForm">
+            <input type="text" id="recipeName" name="name" placeholder="Recipe Name">
+            <input type="text" id="cookTime" name="time" placeholder="Cook Time">
+            <input type="text" id="description" name="description" placeholder="Description">
+            <input type="submit" value="Add To CookBook" id="submitButton">
+        </form>
+    </div>
+    <div class="container">
+        <h2>Recipe Cards</h2>
+        <ul id="recipe-list" class="cards"></ul>
+    </div>
+    
+    <script src="index.js"></script>
+    <script defer src="db.json"></script>
+</body>
+</html>
