@@ -24,7 +24,7 @@ function renderOneRecipe(recipes){
     })
 }
 
-//up date
+
 // Fetch JSON data from URL
 function getAllRecipes(){
   fetch('http://localhost:3000/recipes')
