@@ -12,38 +12,21 @@
       "name": "Mac n Cheese",
       "time": "60 Minutes",
       "description": "Macaroni and cheese is a dish of macaroni and a cheese sauce, most commonly cheddar sauce.",
-      "timesCooked": ""
-    },
-    {
-      "id": "3c2c",
-      "name": "Fried Rice",
-      "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
-      "time": "25 Minutes",
-      "timesCooked": ""
-    },
-    {
-      "id": "0063",
-      "name": "Fried Rice",
-      "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
-      "time": "25 Minutes"
-    },
-    {
-      "id": "8417",
-      "name": "Pie",
-      "description": "hot fruit",
-      "time": "120 minutes"
-    },
-    {
-      "id": "5726",
-      "name": "Fried Rice",
-      "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
-      "time": "25 Minutes"
+      "cooked":"5"
     },
     {
       "id": "7cb4",
       "name": "Bacon egg and cheese",
       "description": "I'm from nyc",
-      "time": "15 Minutes"
+      "time": "15 Minutes",
+      "cooked":"20"
+    },
+    {
+      "id": "d32a",
+      "name": "Grilled Chesse",
+      "description": "Cheese and bread",
+      "time": "10 Minutes",
+      "cooked":"6"
     }
   ]
 }

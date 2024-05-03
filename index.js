@@ -10,10 +10,17 @@ function renderOneRecipe(recipes){
             <span class="cook-time">${recipes.time}</span> CookTime
         </p>
         <p>${recipes.description}</p>
+        <p>${recipes.cooked}</p>
     </div>
     <div class="button">
+      <button id="like"> Cooked </button>
       <button id="delete_btn"> Delete </button>
     `
+    card.querySelector('#like').addEventListener('click', () =>{
+      recipes.time+= 1
+      card.querySelector('span').textContent= recipes.time
+      updateRecipe(recipe)
+    })
     document.querySelector(`#recipe-list`).appendChild(card);
 
     card.querySelector('#delete_btn').addEventListener('click', () => {        
@@ -50,7 +57,8 @@ function handleSubmit(e){
     let recipe = {
       name:e.target.name.value,
       description:e.target.description.value,
-      time:e.target.time.value    }
+      time:e.target.time.value,
+      cooked: 0  }
   addRecipe(recipe)
 }
 
@@ -69,10 +77,24 @@ function addRecipe(recipe){
 }
 //Handles Delete
 function deleteRecipe(id){
-  fetch(`http://localhost:3000/recipes/${id}`,{
+  fetch(`http://localhost:3000/recipes/${id}`, {
     method:'DELETE',
-    headers:{'Content-Type':'application/json'
+    headers:{
+      'Content-Type':'application/json'
 }
+  })
+  .then(res => res.json())
+  .then(recipes => console.log(recipes))
+
+}
+//Hnadles update
+function updateRecipe(recipe){
+  fetch(`http://localhost:3000/recipes/${recipes.id}`,{
+    method:'PATCH',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body: JSON.stringify(recipe)
   })
   .then(res => res.json())
   .then(recipes => console.log(recipes))
