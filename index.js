@@ -7,19 +7,19 @@ function renderOneRecipe(recipes){
     <div class="content">
         <h4>${recipes.name}</h4>
         <p>
-            <span class="cook-time">${recipes.time}</span> CookTime
+            <p class="cook-time">${recipes.time}</p> CookTime
         </p>
         <p>${recipes.description}</p>
-        <p>${recipes.cooked}</p>
+        <span class="times cooked" >${recipes.cooked}</span>
     </div>
     <div class="button">
       <button id="like"> Cooked </button>
       <button id="delete_btn"> Delete </button>
     `
     card.querySelector('#like').addEventListener('click', () =>{
-      recipes.time+= 1
-      card.querySelector('span').textContent= recipes.time
-      updateRecipe(recipe)
+      recipes.cooked+= 1
+      card.querySelector('span').textContent= recipes.cooked
+      updateRecipe(recipes)
     })
     document.querySelector(`#recipe-list`).appendChild(card);
 
@@ -97,5 +97,5 @@ function updateRecipe(recipe){
     body: JSON.stringify(recipe)
   })
   .then(res => res.json())
-  .then(recipes => console.log(recipes))
+  .then(recipe => renderOneRecipe(recipe))
 }

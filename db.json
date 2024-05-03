@@ -1,32 +1,3 @@
 {
-  "recipes": [
-    {
-      "id": "1",
-      "name": "Katsudon",
-      "time": "45 Minutes",
-      "description": "Katsudon is a popular Japanese food, a bowl of rice topped with a deep-fried breaded pork cutlet, egg, vegetables, and condiments. ",
-      "timesCooked": ""
-    },
-    {
-      "id": "2",
-      "name": "Mac n Cheese",
-      "time": "60 Minutes",
-      "description": "Macaroni and cheese is a dish of macaroni and a cheese sauce, most commonly cheddar sauce.",
-      "cooked":"5"
-    },
-    {
-      "id": "7cb4",
-      "name": "Bacon egg and cheese",
-      "description": "I'm from nyc",
-      "time": "15 Minutes",
-      "cooked":"20"
-    },
-    {
-      "id": "d32a",
-      "name": "Grilled Chesse",
-      "description": "Cheese and bread",
-      "time": "10 Minutes",
-      "cooked":"6"
-    }
-  ]
+  "recipes": []
 }
