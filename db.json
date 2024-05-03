@@ -1,33 +1,50 @@
 {
-  "recipes" :
-  [
+  "recipes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Katsudon",
       "time": "45 Minutes",
       "description": "Katsudon is a popular Japanese food, a bowl of rice topped with a deep-fried breaded pork cutlet, egg, vegetables, and condiments. ",
-      "timesCooked":""
+      "timesCooked": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Mac n Cheese",
       "time": "60 Minutes",
       "description": "Macaroni and cheese is a dish of macaroni and a cheese sauce, most commonly cheddar sauce.",
-      "timesCooked":""
+      "timesCooked": ""
     },
     {
       "id": "3c2c",
       "name": "Fried Rice",
       "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
       "time": "25 Minutes",
-      "timesCooked":""
+      "timesCooked": ""
     },
     {
       "id": "9317",
       "name": "Pie",
       "description": "Hot Fruit",
       "time": "120 Minutes",
-      "timesCooked":""
+      "timesCooked": ""
+    },
+    {
+      "id": "0063",
+      "name": "Fried Rice",
+      "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
+      "time": "25 Minutes"
+    },
+    {
+      "id": "8417",
+      "name": "Pie",
+      "description": "hot fruit",
+      "time": "120 minutes"
+    },
+    {
+      "id": "5726",
+      "name": "Fried Rice",
+      "description": "Day old white rice seasoned with soy sauce. Mix veg and egg added for taste",
+      "time": "25 Minutes"
     }
   ]
 }

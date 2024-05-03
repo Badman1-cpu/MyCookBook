@@ -16,8 +16,8 @@ function renderOneRecipe(recipes){
     `
     document.querySelector(`#recipe-list`).appendChild(card);
 
-    card.querySelector('#delete_btn').addEventListener('click', () => {
-        card.remove()
+    card.querySelector('#delete_btn').addEventListener('click', () => {        
+      card.innerHTML = ''
     })
 }
 
@@ -36,7 +36,7 @@ function getAllRecipes(){
     getAllRecipes()
     console.log(`after get all recipes`)
   }
-initialize()
+  initialize()
 
 //Add Recipe to Recipe-list
 //
@@ -49,9 +49,7 @@ function handleSubmit(e){
     let recipe = {
       name:e.target.name.value,
       description:e.target.description.value,
-      time:e.target.time.value
-    }
-  renderOneRecipe(recipe)
+      time:e.target.time.value    }
   addRecipe(recipe)
 }
 
@@ -69,3 +67,12 @@ function addRecipe(recipe){
   .then(recipe => renderOneRecipe(recipe))
 }
 
+function deleteRecipe(id){
+  fetch('http://localhost:3000/recipes/${id}',{
+    method:'DELETE',
+    headers:{'Content-Type':'application/json'
+}
+  })
+  .then(res => res.json())
+  .then(recipes =console.log(recipes))
+}
