@@ -19,7 +19,7 @@ function renderOneRecipe(recipes){
     card.querySelector('#like').addEventListener('click', () =>{
       recipes.cooked+= 1
       card.querySelector('span').textContent= recipes.cooked
-      updateRecipe(recipes)
+      updateRecipe(recipe)
     })
     document.querySelector(`#recipe-list`).appendChild(card);
 
@@ -51,10 +51,17 @@ function getAllRecipes(){
 //Event Listeners
 document.querySelector('#recipeForm').addEventListener('submit',handleSubmit);
 
+//Define recipe for function 
+const recipe = {
+  name:recipes.name.value,
+  description:recipes.description.value,
+  time:recipes.time.value,
+  cooked: 0  
+}
 
 function handleSubmit(e){
   e.preventDefault()
-    let recipe = {
+     const recipe = {
       name:e.target.name.value,
       description:e.target.description.value,
       time:e.target.time.value,
@@ -89,7 +96,7 @@ function deleteRecipe(id){
 }
 //Hnadles update
 function updateRecipe(recipe){
-  fetch(`http://localhost:3000/recipes/${recipes.id}`,{
+  fetch(`http://localhost:3000/recipes/${recipe.id}`,{
     method:'PATCH',
     headers:{
       'Content-Type':'application/json'
@@ -99,3 +106,11 @@ function updateRecipe(recipe){
   .then(res => res.json())
   .then(recipe => renderOneRecipe(recipe))
 }
+
+
+//let card = "string"
+//function tayler(card) {
+  //console.log(card)
+ // let card = 1
+  //console.log(card)
+//}
