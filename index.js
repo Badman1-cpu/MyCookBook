@@ -1,3 +1,15 @@
+//Define recipe for jks globally
+let recipe = 
+function handleSubmit(e){
+  e.preventDefault()
+      recipe = {
+      name:e.target.name.value,
+      description:e.target.description.value,
+      time:e.target.time.value,
+      cooked: 0  }
+  addRecipe(recipe)
+}
+
 //DOM Render Functions
 function renderOneRecipe(recipes){
     //Bulid Reccipe Card
@@ -55,17 +67,6 @@ document.querySelector('#recipeForm').addEventListener('submit',recipe);
 /*const recipes = $.getJSON("db.json", function(data){
 });
 */
-//Define recipe for jks globally
-let recipe = 
-function handleSubmit(e){
-  e.preventDefault()
-      recipe = {
-      name:e.target.name.value,
-      description:e.target.description.value,
-      time:e.target.time.value,
-      cooked: 0  }
-  addRecipe(recipe)
-}
 
 
 //Handle Submit
