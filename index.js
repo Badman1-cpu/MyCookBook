@@ -49,19 +49,17 @@ function getAllRecipes(){
 //Add Recipe to Recipe-list
 //
 //Event Listeners
-document.querySelector('#recipeForm').addEventListener('submit',handleSubmit);
+document.querySelector('#recipeForm').addEventListener('submit',recipe);
 
-//Define recipe for function 
-const recipe = {
-  name:recipes.name.value,
-  description:recipes.description.value,
-  time:recipes.time.value,
-  cooked: 0  
-}
-
+//Ajax call so that data is in the javascript file and not just inb the json server, do i delete the fetch data and everything after that or leave as a fail safe?
+/*const recipes = $.getJSON("db.json", function(data){
+});
+*/
+//Define recipe for jks globally
+let recipe = 
 function handleSubmit(e){
   e.preventDefault()
-     const recipe = {
+      recipe = {
       name:e.target.name.value,
       description:e.target.description.value,
       time:e.target.time.value,
@@ -104,7 +102,7 @@ function updateRecipe(recipe){
     body: JSON.stringify(recipe)
   })
   .then(res => res.json())
-  .then(recipe => renderOneRecipe(recipe))
+  .then(recipe => console.log(recipe))
 }
 
 
